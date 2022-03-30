@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><head><title>Wakatobi - Availability Management App</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><base href="/ama/"><link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.min.css"><link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><script>var ENV = 'production';
+        var API_SERVER_URL = 'https://wakatobi.interaktiv.sg/api-dev/';
+        var ERROR_MESSAGE = [];
+        var SF_URL = ENV === 'development' ? 'https://login.salesforce.com/' : 'https://login.salesforce.com/';
+        var URL_PREFIX = '/dev/';
+        URL_PREFIX = URL_PREFIX.substr(0, URL_PREFIX.length - 1);
+        var oReq = new XMLHttpRequest();
+        var ORIGIN = 'https://wakatobi.interaktiv.sg/api-dev/';
+        oReq.ORIGIN = ORIGIN;
+        oReq.addEventListener("load", reqListener);
+        oReq.open("GET", API_SERVER_URL + 'error-message');
+        oReq.send();
+        function reqListener() {
+            ERROR_MESSAGE = JSON.parse(this.responseText).records;
+            localStorage.setItem('ERROR_MESSAGE', JSON.stringify(ERROR_MESSAGE));
+        }</script><link rel="shortcut icon" href="https://wakatobi.interaktiv.sg//dev/logo-only.png"><link href="https://wakatobi.interaktiv.sg//dev/app.e1bde576f89319a5a8ed78f6f426afed.css" rel="stylesheet"></head><body><div id="root"></div><!-- Latest compiled and minified JavaScript --><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.min.js"></script><script type="text/javascript" src="https://wakatobi.interaktiv.sg//dev/vendor.bb010bbe5bbff7355ed0.js"></script><script type="text/javascript" src="https://wakatobi.interaktiv.sg//dev/app.0ec122b57fd17475db93.js"></script></body></html>
